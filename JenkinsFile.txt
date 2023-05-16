@@ -14,6 +14,7 @@ echo "Java_Home = ${JAVA_HOME}"
 '''
 }
 }
+}
 stage('git clone') {
 steps {
 echo 'git code cloning '
@@ -26,7 +27,7 @@ sh 'mvn -Dmaven.test.failure.ignore=true install'
 }
 }
 }
-}
+
 
 
 
