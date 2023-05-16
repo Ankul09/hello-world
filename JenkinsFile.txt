@@ -15,15 +15,18 @@ echo "Java_Home = ${JAVA_HOME}"
 }
 }
 stage('git clone') {
-agent any
 steps {
 echo 'git code cloning '
 git 'https://github.com/Ankul09/hello-world.git'
 }
 }
+stage ('Build') {
+steps {
+sh 'mvn -Dmaven.test.failure.ignore=true install'
 }
 }
-
+}
+}
 
 
 
