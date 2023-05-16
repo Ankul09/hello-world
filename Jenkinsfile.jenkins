@@ -1,0 +1,12 @@
+pipeline {
+agent none
+stages {
+stage('git clone') {
+agent any
+steps {
+echo 'git code cloning '
+git 'https://github.com/Ankul09/hello-world.git'
+}
+}
+}
+}
