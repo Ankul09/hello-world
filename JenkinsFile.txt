@@ -23,7 +23,7 @@ git 'https://github.com/Ankul09/hello-world.git'
 }
 stage ('Build') {
 steps {
-sh 'mvn -Dmaven.test.failure.ignore=true install'
+sh 'mvn clean install -Dmaven.test.skip=true'
 }
 }
 }
